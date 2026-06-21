@@ -1,0 +1,245 @@
+おけ。今の状態なら、**一回「制作管理リポジトリ」として固める**のがベスト。
+テンプレ一式をZIPで作ったので、まずこれを今のVS Codeプロジェクトに展開すれば、すぐ管理システムに移行できる。
+
+[amamiya_world_bible_template.zip をダウンロード](sandbox:/mnt/data/amamiya_world_bible_template.zip)
+
+中身には、以下を入れてある。
+
+```text
+00_README.md
+CODEX_TASK.md
+01_CANON/
+02_WORKING/
+03_DATA/
+04_MAPS/
+05_PROMPTS/
+06_IMAGES/
+07_EXPORT/
+08_SCRIPTS/
+09_REPORTS/
+```
+
+特に大事なのはこの3つ。
+
+```text
+03_DATA/image_assets.csv
+03_DATA/mizumori_city.yaml
+03_DATA/suirei_high_school.yaml
+```
+
+画像は全部 `image_assets.csv` に登録して、採用画像だけ `06_IMAGES/04_CANON` に置く。
+今まで作った水杜市・翠嶺高校・白庭計画の構造は、すでに「街の方角そのものがテーマを持つ」「翠嶺高校が青春と管理の交差点になる」「白庭計画は悪の秘密基地ではなく善意の政策が越境したもの」という軸が固まっているので、まずはCanonとして入れる形にしてある。  
+
+---
+
+# まず今のフォルダをこう整理する
+
+今のスクショの構造だと、こう移行するのがいい。
+
+```text
+GPTとの会話/
+  プロット仮.txt
+  レギュラーメンバー仮.txt
+  水杜市マクロマップ完全版・所版
+  翠嶺高校全体マップ
+```
+
+これはまず、
+
+```text
+00_INBOX/chat_logs/
+```
+
+に入れる。
+
+そのうえで、内容を精査して、
+
+```text
+01_CANON/
+02_WORKING/
+```
+
+へ分ける。
+
+画像は今こうなっている。
+
+```text
+キャラクター画像/
+  雨宮類/
+  黒瀬型/
+  世界観/
+  日向真帆/
+```
+
+これは最初からCanon扱いにしない。
+いったん全部、
+
+```text
+06_IMAGES/01_RAW/
+```
+
+に置く。
+
+その後、採用できるものだけ、
+
+```text
+06_IMAGES/04_CANON/
+```
+
+に移す。
+
+これがかなり重要。今ある画像は「素材」であって、まだ全部が正史ではない、という扱いにする。
+
+---
+
+# Codex / GitHub Copilotへの指示文
+
+そのまま貼るならこれ。
+
+```text
+あなたは『雨宮類は最適解を知らない』の制作管理リポジトリを整備するエージェントです。
+
+目的：
+現在の雑多なフォルダ構成を、制作Bibleとして再整理してください。
+
+方針：
+- GPTとの会話ログは 00_INBOX/chat_logs に移動する。
+- 画像はまず 06_IMAGES/01_RAW に置く。
+- 採用済み画像だけ 06_IMAGES/04_CANON に置く。
+- 設定として確定している文章は 01_CANON に置く。
+- まだ揺れている案は 02_WORKING に置く。
+- YAML/CSVとして扱えるものは 03_DATA に構造化する。
+- Mermaidマップは 04_MAPS に置く。
+- 画像生成プロンプトは 05_PROMPTS に置く。
+- 既存ファイルは削除しない。
+- 既存ファイルを上書きしない。
+- 画像ファイルは image_assets.csv に登録する。
+
+最初にやること：
+1. ZIP内のフォルダ構成を現在のプロジェクトルートに展開する。
+2. python 08_SCRIPTS/setup_check.py を実行する。
+3. python 08_SCRIPTS/register_existing_images.py を実行して既存画像を image_assets.csv に登録する。
+4. 登録された画像に対して、status を RAW / CANDIDATE / SELECTED / CANON / REJECTED のどれかに分類する。
+5. 画像のファイル名が日本語でも、管理IDは asset_id で統一する。
+```
+
+---
+
+# 画像出力はどこでやるべきか
+
+結論から言うと、**Codex単体では画像生成はできない**と思った方がいい。
+Codexは基本的に「コードを書く・実行する」側なので、画像生成モデルに直接つながっていなければ、画像そのものは出せない。
+
+現実的な選択肢は3つ。
+
+## 1. ChatGPT上で生成して、手動で保存する
+
+一番安全。
+ChatGPT Imagesは、プロンプトから画像生成でき、既存画像をアップロードして編集もできる。生成画像はImagesに自動保存され、そこからSaveで端末に保存できる。([OpenAI Help Center][1])
+
+この場合の運用はこう。
+
+```text
+1. 05_PROMPTS/background/xxx.md のプロンプトをChatGPTに貼る
+2. 画像生成
+3. 良いものを保存
+4. VS Code側の 06_IMAGES/01_RAW に入れる
+5. image_assets.csv に登録
+6. 目視レビュー
+7. 採用なら 06_IMAGES/04_CANON へ移動
+```
+
+今の段階では、これが一番事故らない。
+
+## 2. OpenAI APIで画像生成して、Codexに保存までやらせる
+
+これが将来的には一番きれい。
+OpenAIのAPIリファレンスにはImages系の「Generate an Image」「Edit an Image」「Create Variation」などの項目があるので、APIキーを使える環境なら、Codexにスクリプトを書かせて画像生成→保存→CSV登録まで自動化できる。([OpenAI Platform][2])
+
+ZIP内にも、事故防止のためスタブとして、
+
+```text
+08_SCRIPTS/generate_image_openai_example.py
+```
+
+を入れてある。
+
+ただし、API仕様やモデル名は変わり得るので、実装時に公式ドキュメントを見て合わせるのが前提。
+
+## 3. PlaywrightでChatGPTを開いて自動保存する
+
+技術的にはできる可能性はある。
+でも、これはおすすめ度低い。
+
+理由は、
+
+```text
+UI変更で壊れる
+ログインや2FAで止まる
+ダウンロード処理が不安定
+生成完了待ちが難しい
+利用規約や自動操作まわりの確認が必要
+```
+
+だから、最初からPlaywright自動化に行くより、**API化できるならAPI、できないなら手動保存＋CSV管理**がいい。
+
+---
+
+# 今後の画像管理フロー
+
+これで固定するといい。
+
+```text
+05_PROMPTS/
+  ↓
+ChatGPTまたはAPIで画像生成
+  ↓
+06_IMAGES/01_RAW/
+  ↓
+目視レビュー
+  ↓
+06_IMAGES/02_CANDIDATE/
+  ↓
+06_IMAGES/03_SELECTED/
+  ↓
+06_IMAGES/04_CANON/
+```
+
+画像のログは全部ここ。
+
+```text
+03_DATA/image_assets.csv
+```
+
+判定基準はこれ。
+
+```text
+世界観に合うか
+キャラ絵柄と合うか
+白庭距離が合っているか
+場所の役割が画で伝わるか
+読める文字や実在ロゴがないか
+今後も再利用できるか
+```
+
+---
+
+# 直近のおすすめ作業順
+
+まずこれで行こう。
+
+```text
+1. ZIPを今のプロジェクトルートに展開
+2. 既存画像を 06_IMAGES/01_RAW に移す
+3. register_existing_images.py を実行
+4. image_assets.csv を開いて、status を整理
+5. 雨宮類・黒瀬型・日向真帆の三面図だけ CANON候補にする
+6. 世界観画像はまだ RAW/CANDIDATE に止める
+7. 次に翠嶺高校2F詳細マップを作る
+```
+
+特に、**キャラ三面図を先にCANON化**した方がいい。
+背景画像の絵柄がズレる問題は、キャラ設定画を基準参照にしないとずっと起きる。
+
+[1]: https://help.openai.com/en/articles/11084440-images-in-chatgpt "Images in ChatGPT | OpenAI Help Center"
+[2]: https://platform.openai.com/docs/api-reference/run-steps/listRunSteps "List run steps | OpenAI API Reference"

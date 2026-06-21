@@ -1,0 +1,26 @@
+visual_rules:
+  global:
+    style: 現代日本アニメ背景美術
+    realism: semi_realistic
+    line: fine
+    avoid:
+      - 過度なSF演出
+      - 実在ロゴ
+      - 判読可能文字
+      - 写真風過多
+  contrast:
+    hakuniwa_side:
+      colors: [white, pale_blue, cool_gray]
+      materials: [glass, resin, metal]
+      mood: 清潔で冷たい
+    amamiya_side:
+      colors: [amber, brown, dusty_green]
+      materials: [wood, paper, aged_metal]
+      mood: 雑然で安心
+  area_keywords:
+    station_front: [整流, 清潔, 監視感]
+    old_shotengai: [雑多, 手触り, 温かさ]
+    river_walk: [余白, 反射光, 逃げ場]
+    new_town: [静穏, 規律, 息苦しさ]
+    danchi: [生活感, 福祉, 孤独]
+    school: [青春, 制度, 境界]

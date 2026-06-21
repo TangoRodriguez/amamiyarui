@@ -1,0 +1,11 @@
+shot_id,location_id,location_name,camera,usage,mood
+AMR-S01,LOC-AMAMIYA-LAB,雨宮修理研究所,入口から奥の広角,初登場と帰還,非最適の安心
+AMR-S02,LOC-AMAMIYA-LAB,雨宮修理研究所,作業机斜め上,構造説明,思考集中
+AMR-S03,LOC-AMAMIYA-LAB,雨宮修理研究所,ホワイトボード正対,作戦会議,知性と手触り
+MZM-S01,LOC-MZM-STATION,水杜中央駅前,駅前ロータリー遠景,導入カット,整流と管理感
+MZM-S02,LOC-MZM-RIVER,水杜川遊歩道,川沿いアイレベル,感情整理回,余白
+SRH-S01,LOC-SUIREI,翠嶺高校,渡り廊下から中庭,学内転換,青春と制度
+SRH-S02,LOC-SUIREI,翠嶺高校,生徒会室俯瞰,黒瀬導線,冷静な最適化
+HKW-S01,LOC-HAKUNIWA-OFFICE,白庭計画事務室,室内ワイド,本筋示唆,清潔な不穏
+SGS-S01,LOC-SHIRAGASE,白ヶ瀬団地,共用廊下ロング,福祉回,生活と孤独
+TSK-S01,LOC-TSUKINOOKA,月ノ丘ニュータウン,夜道ロング,家庭回,静穏と圧力

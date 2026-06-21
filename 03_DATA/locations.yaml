@@ -1,0 +1,55 @@
+locations:
+  - id: LOC-MZM-STATION
+    name: 水杜中央駅前
+    area: 中央
+    type: transport
+
+  - id: LOC-OLD-SHOTENGAI
+    name: 旧水杜商店街
+    area: 西
+    type: district
+
+  - id: LOC-AMAMIYA-LAB
+    name: 雨宮修理研究所
+    area: 旧水杜商店街
+    type: workshop
+
+  - id: LOC-MZM-RIVER
+    name: 水杜川遊歩道
+    area: 南
+    type: waterfront
+
+  - id: LOC-TSUKINOOKA
+    name: 月ノ丘ニュータウン
+    area: 北
+    type: residential
+
+  - id: LOC-SHIRAGASE
+    name: 白ヶ瀬団地
+    area: 南西
+    type: residential
+
+  - id: LOC-SUIREI
+    name: 翠嶺高校
+    area: 北東
+    type: school
+
+  - id: LOC-HOSHIHARA
+    name: 星原こども発達センター
+    area: 東
+    type: care
+
+  - id: LOC-CITYHALL-SMART
+    name: 水杜市スマート共生課
+    area: 東
+    type: administration
+
+  - id: LOC-HAKUNIWA-OFFICE
+    name: 白庭計画事務室
+    area: 東
+    type: project_office
+
+  - id: LOC-KUROSE-LIVING
+    name: 黒瀬家リビング
+    area: 東口高層住宅
+    type: home

@@ -1,0 +1,21 @@
+city:
+  id: MZM
+  name: 水杜市
+  concept: 便利になった街で人間だけが少し不便なまま残っている
+  profile:
+    category: 首都圏近郊の地方中核都市
+    access_to_capital_minutes: 45
+  zones:
+    north: 月ノ丘ニュータウン
+    center: 水杜中央駅前
+    west: 旧水杜商店街
+    east: 行政医療地区
+    southwest: 白ヶ瀬団地
+    southeast: 汀浜工業跡地
+  narrative_axes:
+    - name: 日常軸
+      route: 月ノ丘ニュータウン -> 翠嶺高校 -> 水杜中央駅 -> 商店街 -> 水杜川
+    - name: 制度軸
+      route: 翠嶺高校 -> 市役所スマート共生課 -> 発達センター -> 研究機能
+    - name: 余白軸
+      route: 商店街 -> 雨宮修理研究所 -> 水杜川 -> 団地

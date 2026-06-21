@@ -1,0 +1,58 @@
+characters:
+  - id: CH-RUI
+    name: 雨宮類
+    role: 主人公
+    grade: 高校2年
+    worldview: 最適解より壊れない解
+    home_area: 旧水杜商店街
+
+  - id: CH-MAHO
+    name: 日向真帆
+    role: 相棒
+    grade: 高校2年
+    worldview: 感情の翻訳
+    home_area: 月ノ丘ニュータウン
+
+  - id: CH-KUROSE
+    name: 黒瀬型
+    role: 思想対立軸
+    grade: 高校2年
+    worldview: 偏りの最適化
+    home_area: 駅東口高層住宅
+
+  - id: CH-RIKU
+    name: 小森陸
+    role: 学校導入
+    grade: 高校2年
+    home_area: 旧商店街裏
+
+  - id: CH-RITSU
+    name: 佐倉律
+    role: 身体感覚軸
+    grade: 高校2年
+    home_area: 月ノ丘周辺
+
+  - id: CH-MEI
+    name: 光田芽衣
+    role: 情報導線
+    grade: 高校2年
+
+  - id: AD-HARUOMI
+    name: 雨宮晴臣
+    role: 大人レギュラー
+    job: 修理屋/元研究者
+
+  - id: AD-KIRITANI
+    name: 桐谷澪
+    role: 准レギュラー
+    job: 市役所職員
+
+  - id: AD-USAMI
+    name: 宇佐美遥
+    role: 准レギュラー
+    job: 事務所マネージャー
+
+  - id: AD-SAGARA
+    name: 相良朔
+    role: 准レギュラー
+    job: フリースクールスタッフ

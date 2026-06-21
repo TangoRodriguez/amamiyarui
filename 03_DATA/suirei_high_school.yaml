@@ -1,0 +1,20 @@
+school:
+  id: SUIREI
+  name: 水杜県立翠嶺高等学校
+  concept: 青春のホームであり管理が浸透する前線
+  designation: 未来型教育モデル校
+  layout:
+    a_building:
+      functions: [普通教室, 職員室, 保健室, 進路相談]
+    b_building:
+      functions: [図書室, 生徒会室, ICT室, 会議室]
+    west_zone:
+      functions: [体育館, 部室棟]
+    south_zone:
+      functions: [正門, グラウンド, 昇降口]
+    east_zone:
+      functions: [外部連携動線]
+  key_points:
+    - 図書室は感情の余白
+    - 生徒会室は最適化実務
+    - 保健室は支援と記録の境界
