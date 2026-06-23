@@ -1,0 +1,19 @@
+active_canon:
+  characters:
+    CH-RUI:
+      three_view: CH-RUI-3VIEW-v01
+      status: CANON
+      source: 03_DATA/image_assets.csv
+    CH-KUROSE:
+      three_view: CH-KUROSE-3VIEW-v01
+      status: CANON
+      source: 03_DATA/image_assets.csv
+    CH-MAHO:
+      three_view: CH-MAHO-3VIEW-v01
+      status: SELECTED
+      source: 03_DATA/image_assets.csv
+  backgrounds: {}
+notes:
+  - Background canon is not active yet.
+  - REFERENCE assets are working copies and may not be canon.
+  - SUPERSEDED holds former canon assets when replacements are promoted.

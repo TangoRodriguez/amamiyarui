@@ -1,0 +1,14 @@
+entity_id,asset_type,current_canon,previous_canon,candidate_assets,selected_assets,notes,updated_at
+CH-RUI,character,CH-RUI-3VIEW-v01,,"",CH-RUI-EXPRESSION-v01;CH-RUI-POSE-v01,Canon character art is stable,2026-06-23T00:00:00+00:00
+CH-KUROSE,character,CH-KUROSE-3VIEW-v01,,"",CH-KUROSE-EXPRESSION-v01;CH-KUROSE-POSE-v01,Canon character art is stable,2026-06-23T00:00:00+00:00
+CH-MAHO,character,,,"",CH-MAHO-3VIEW-v01;CH-MAHO-EXPRESSION-v01;CH-MAHO-POSE-v01,Selected character art only,2026-06-23T00:00:00+00:00
+LOC-AMAMIYA-LAB,background,,,BG-AMAMIYA-REPAIRLAB-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-SUIREI,background,,,BG-SUIREI-STUDENTCOUNCIL-v01;BG-SUIREI-INFIRMARY-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-MZM-RIVER,background,,,BG-MZM-RIVER-WALK-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-MZM-STATION,background,,,BG-MZM-STATION-FRONT-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-SHIRAGASE,background,,,BG-SHIRAGASE-DANCHI-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-TSUKINOOKA,background,,,BG-TSUKINOOKA-STREET-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-HOSHIHARA,background,,,BG-HOSHIHARA-EXT-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-CITYHALL-SMART,background,,,BG-CITYHALL-SMARTDESK-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-HAKUNIWA-OFFICE,background,,,BG-HAKUNIWA-OFFICE-v01,"",No active canon yet,2026-06-23T00:00:00+00:00
+LOC-KUROSE-LIVING,background,,,BG-KUROSE-LIVING-v01,"",No active canon yet,2026-06-23T00:00:00+00:00

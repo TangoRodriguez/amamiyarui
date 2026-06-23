@@ -12,7 +12,7 @@ CSV_PATH = ROOT / "03_DATA" / "image_assets.csv"
 IMAGE_ROOT = ROOT / "06_IMAGES"
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp", ".tif", ".tiff"}
-VALID_STATUS = {"RAW", "CANDIDATE", "SELECTED", "CANON", "REJECTED"}
+VALID_STATUS = {"RAW", "CANDIDATE", "SELECTED", "CANON", "SUPERSEDED", "REJECTED"}
 CSV_HEADERS = [
     "asset_id",
     "file_name",
@@ -43,6 +43,8 @@ def infer_status(rel_path: str) -> str:
         return "SELECTED"
     if "06_images/02_candidate/" in p:
         return "CANDIDATE"
+    if "06_images/05_superseded/" in p:
+        return "SUPERSEDED"
     if "06_images/99_rejected/" in p:
         return "REJECTED"
     return "RAW"
@@ -220,11 +222,12 @@ def main() -> int:
         rows_by_file_name.setdefault(image_path.name, []).append(new_row)
         created += 1
 
-    # needs_review is true only when the same file_name appears multiple times.
+    # needs_review stays true for explicitly reviewed assets and is also true when the same file_name appears multiple times.
     name_counts = Counter((r.get("file_name") or "").strip() for r in existing_rows if (r.get("file_name") or "").strip())
     for row in existing_rows:
         fname = (row.get("file_name") or "").strip()
-        row["needs_review"] = "true" if fname and name_counts[fname] > 1 else "false"
+        current_review = (row.get("needs_review") or "").strip().lower() == "true"
+        row["needs_review"] = "true" if current_review or (fname and name_counts[fname] > 1) else "false"
 
     rows_out = sorted(existing_rows, key=lambda r: ((r.get("status") or ""), (r.get("asset_id") or ""), (r.get("file_path") or "")))
     write_rows(rows_out)
