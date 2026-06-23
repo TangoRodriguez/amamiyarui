@@ -1,0 +1,143 @@
+spots:
+  - id: A2-2A
+    name: 2年A組
+    building: A棟
+    floor: 2F
+    role: 黒瀬の教室、雨宮との近接点
+    hakuniwa_distance: near
+    connected_characters: [CH-KUROSE]
+    connected_spots: [A2-HALL, A2-COURT, B2-WALK]
+    visual_keywords: [整列, 静かな緊張, 机の列]
+    story_use: 毎日のすれ違いと観察の起点
+
+  - id: A2-2B
+    name: 2年B組
+    building: A棟
+    floor: 2F
+    role: 雨宮と真帆のホーム教室
+    hakuniwa_distance: near
+    connected_characters: [CH-RUI, CH-MAHO, CH-RIKU, CH-RITSU]
+    connected_spots: [A2-HALL, A2-STAIRS, A2-COURT, B2-WALK]
+    visual_keywords: [日常, 付箋, 会話の気配]
+    story_use: 学校編の基点、感情と構造の交差点
+
+  - id: A2-2C
+    name: 2年C組
+    building: A棟
+    floor: 2F
+    role: 光田芽衣の教室
+    hakuniwa_distance: near
+    connected_characters: [CH-MEI]
+    connected_spots: [A2-HALL, A2-TEACHER, B2-WALK]
+    visual_keywords: [観察, 情報, 軽いざわめき]
+    story_use: 情報導線と発信の起点
+
+  - id: A2-TEACHER
+    name: 学年教員スペース
+    building: A棟
+    floor: 2F
+    role: 学年教員の集約点
+    hakuniwa_distance: near
+    connected_characters: []
+    connected_spots: [A2-2A, A2-2B, A2-2C, A2-HALL]
+    visual_keywords: [職員机, 紙束, 端末, 連絡]
+    story_use: 連絡事項、呼び出し、進路の気配
+
+  - id: A2-STAIRS
+    name: 屋上前階段
+    building: A棟
+    floor: 2F
+    role: 思想対話と一時退避の場所
+    hakuniwa_distance: near
+    connected_characters: [CH-RUI, CH-KUROSE, CH-MAHO]
+    connected_spots: [A2-2B, A2-HALL, ROOF]
+    visual_keywords: [踊り場, 影, 静けさ, 外気]
+    story_use: 雨宮と黒瀬の対話、真帆の介入
+
+  - id: A2-HALL
+    name: A棟廊下
+    building: A棟
+    floor: 2F
+    role: 教室間移動の軸
+    hakuniwa_distance: near
+    connected_characters: [CH-RUI, CH-MAHO, CH-KUROSE, CH-MEI]
+    connected_spots: [A2-2A, A2-2B, A2-2C, A2-TEACHER, A2-STAIRS, A2-COURT, B2-WALK]
+    visual_keywords: [掲示物, 窓光, 足音, 生活感]
+    story_use: すれ違い、視線の交差、偶発会話
+
+  - id: A2-COURT
+    name: 中庭
+    building: A棟/B棟間
+    floor: 2F
+    role: A棟とB棟の視線が抜ける余白
+    hakuniwa_distance: near
+    connected_characters: [CH-RUI, CH-MAHO, CH-KUROSE]
+    connected_spots: [A2-HALL, B2-WALK]
+    visual_keywords: [植栽, ベンチ, 風, 余白]
+    story_use: 立ち止まり、観察、気持ちの切り替え
+
+  - id: B2-WALK
+    name: 渡り廊下
+    building: B棟接続部
+    floor: 2F
+    role: A棟とB棟の接続動線
+    hakuniwa_distance: near
+    connected_characters: [CH-RUI, CH-MAHO, CH-KUROSE]
+    connected_spots: [A2-HALL, A2-COURT, B2-LIB, B2-SC, B2-ELINE]
+    visual_keywords: [透明感, 連結, 風の抜け, 行き先]
+    story_use: 学校内の主導線、移動の切替点
+
+  - id: B2-LIB
+    name: 図書室
+    building: B棟
+    floor: 2F
+    role: 雨宮・真帆側の安全地帯
+    hakuniwa_distance: near
+    connected_characters: [CH-RUI, CH-MAHO]
+    connected_spots: [B2-READ, B2-SC, B2-WALK]
+    visual_keywords: [書架, 静音, 柔らかい光, 紙]
+    story_use: 調べ物、沈静、感情の翻訳
+
+  - id: B2-READ
+    name: 閲覧スペース
+    building: B棟
+    floor: 2F
+    role: 図書室の半公共域
+    hakuniwa_distance: near
+    connected_characters: [CH-RUI, CH-MAHO, CH-MEI]
+    connected_spots: [B2-LIB, B2-SC]
+    visual_keywords: [机, メモ, 半個室, 集中]
+    story_use: 相談、仮説整理、静かな共作業
+
+  - id: B2-SC
+    name: 生徒会室
+    building: B棟
+    floor: 2F
+    role: 黒瀬側の拠点
+    hakuniwa_distance: core
+    connected_characters: [CH-KUROSE]
+    connected_spots: [B2-READ, B2-CONF, B2-WALK, B2-ELINE]
+    visual_keywords: [整頓, 端末, 資料, 制御感]
+    story_use: 校内最適化、制度運用、調整実務
+
+  - id: B2-CONF
+    name: 小会議室
+    building: B棟
+    floor: 2F
+    role: 少人数の制度会話用空間
+    hakuniwa_distance: core
+    connected_characters: [CH-KUROSE, CH-RUI]
+    connected_spots: [B2-SC, B2-LIB, B2-ELINE]
+    visual_keywords: [丸机, ホワイトボード, 議事, 密度]
+    story_use: 先生・生徒・制度の短い衝突
+
+  - id: B2-ELINE
+    name: 東門・研究センター方面導線
+    building: B棟
+    floor: 2F
+    role: 外部連携へ抜ける出口
+    hakuniwa_distance: core
+    connected_characters: [CH-KUROSE, AD-KIRITANI]
+    connected_spots: [B2-SC, B2-CONF, B2-WALK]
+    visual_keywords: [案内, 外部接続, 直線導線, 余韻]
+    story_use: 研究センター、行政、白庭計画の接続導線
