@@ -3,53 +3,152 @@ locations:
     name: 水杜中央駅前
     area: 中央
     type: transport
+    hakuniwa_distance: near
+    story_role: 都市導入と移動ハブ
+    visual_keywords: [ガラス, タイル, 導線, 夕景]
+    emotional_tone: 整流と軽い監視感
+    connected_characters: [CH-RUI, CH-MAHO, CH-KUROSE]
+    canon_image: null
+    candidate_images: [BG-MZM-STATION-FRONT-v01]
+    prompt_ids: [MZM-S01, MZM-S02]
+    notes: 日常回の導入カット優先
 
   - id: LOC-OLD-SHOTENGAI
     name: 旧水杜商店街
     area: 西
     type: district
+    hakuniwa_distance: far
+    story_role: 雨宮側の生活圏
+    visual_keywords: [木, 錆, 紙, 暖色]
+    emotional_tone: 雑然と安心
+    connected_characters: [CH-RUI, AD-HARUOMI, CH-RIKU]
+    canon_image: null
+    candidate_images: []
+    prompt_ids: [AMR-S01]
+    notes: エリア代表画は修理研究所を参照
 
   - id: LOC-AMAMIYA-LAB
     name: 雨宮修理研究所
     area: 旧水杜商店街
     type: workshop
+    hakuniwa_distance: far
+    story_role: 作戦会議と価値観提示
+    visual_keywords: [工具, 金属, 木目, 修理痕]
+    emotional_tone: 非最適の安心感
+    connected_characters: [CH-RUI, CH-MAHO, AD-HARUOMI]
+    canon_image: null
+    candidate_images: [BG-AMAMIYA-REPAIRLAB-v01]
+    prompt_ids: [AMR-S01, AMR-S02, AMR-S03]
+    notes: background_style基準へコピー済み
 
   - id: LOC-MZM-RIVER
     name: 水杜川遊歩道
     area: 南
     type: waterfront
+    hakuniwa_distance: medium
+    story_role: 感情整理と転換点
+    visual_keywords: [川面反射, 柵, ベンチ, 夕空]
+    emotional_tone: 余白と静かな解放
+    connected_characters: [CH-RUI, CH-MAHO, CH-RITSU]
+    canon_image: null
+    candidate_images: [BG-MZM-RIVER-WALK-v01]
+    prompt_ids: [MZM-S03]
+    notes: 背景テンプレの基準画
 
   - id: LOC-TSUKINOOKA
     name: 月ノ丘ニュータウン
     area: 北
     type: residential
+    hakuniwa_distance: medium
+    story_role: 家庭最適化の舞台
+    visual_keywords: [街灯, 坂道, 防犯, 濃紺]
+    emotional_tone: 安全と息苦しさ
+    connected_characters: [CH-MAHO, CH-RITSU]
+    canon_image: null
+    candidate_images: [BG-TSUKINOOKA-STREET-v01]
+    prompt_ids: [TSK-S01]
+    notes: 家庭回の導入背景
 
   - id: LOC-SHIRAGASE
     name: 白ヶ瀬団地
     area: 南西
     type: residential
+    hakuniwa_distance: medium
+    story_role: 福祉と孤独の交点
+    visual_keywords: [コンクリート, 郵便受け, 掲示板, 植木鉢]
+    emotional_tone: 生活感と孤立
+    connected_characters: [AD-KIRITANI, CH-RUI]
+    canon_image: null
+    candidate_images: [BG-SHIRAGASE-DANCHI-v01]
+    prompt_ids: [SGS-S01]
+    notes: 地域支援回の定番ロケ
 
   - id: LOC-SUIREI
     name: 翠嶺高校
     area: 北東
     type: school
+    hakuniwa_distance: near
+    story_role: 日常層のホーム
+    visual_keywords: [白壁, 渡り廊下, 図書室, 生徒会室]
+    emotional_tone: 青春と管理の同居
+    connected_characters: [CH-RUI, CH-MAHO, CH-KUROSE, CH-RIKU, CH-RITSU, CH-MEI]
+    canon_image: null
+    candidate_images: [BG-SUIREI-STUDENTCOUNCIL-v01, BG-SUIREI-INFIRMARY-v01]
+    prompt_ids: [SRH-S01, SRH-S02]
+    notes: 生徒会室を優先参照
 
   - id: LOC-HOSHIHARA
     name: 星原こども発達センター
     area: 東
     type: care
+    hakuniwa_distance: near
+    story_role: 支援制度の入口
+    visual_keywords: [受付, 案内板, 白基調, 動線]
+    emotional_tone: 善意と緊張
+    connected_characters: [AD-SAGARA, AD-KIRITANI, CH-RUI]
+    canon_image: null
+    candidate_images: [BG-HOSHIHARA-EXT-v01]
+    prompt_ids: [HSH-S01]
+    notes: 制度回の起点ロケ
 
   - id: LOC-CITYHALL-SMART
     name: 水杜市スマート共生課
     area: 東
     type: administration
+    hakuniwa_distance: near
+    story_role: 行政実務と白庭接続
+    visual_keywords: [蛍光灯, 端末, 書類, 行政窓口]
+    emotional_tone: 善意と疲労
+    connected_characters: [AD-KIRITANI, CH-KUROSE, CH-RUI]
+    canon_image: null
+    candidate_images: [BG-CITYHALL-SMARTDESK-v01]
+    prompt_ids: [CTY-S01]
+    notes: 政策説明パートの基準
 
   - id: LOC-HAKUNIWA-OFFICE
     name: 白庭計画事務室
     area: 東
     type: project_office
+    hakuniwa_distance: core
+    story_role: 本筋情報の中枢
+    visual_keywords: [白, ガラス, 棚, タブレット]
+    emotional_tone: 清潔な不穏
+    connected_characters: [CH-KUROSE, CH-RUI, AD-KIRITANI]
+    canon_image: null
+    candidate_images: [BG-HAKUNIWA-OFFICE-v01]
+    prompt_ids: [HKW-S01]
+    notes: background_style参照あり
 
   - id: LOC-KUROSE-LIVING
     name: 黒瀬家リビング
     area: 東口高層住宅
     type: home
+    hakuniwa_distance: near
+    story_role: 家庭内最適化の象徴
+    visual_keywords: [夜景, 食卓, 学術資料, 静音]
+    emotional_tone: 整っているのに空席感
+    connected_characters: [CH-KUROSE]
+    canon_image: null
+    candidate_images: [BG-KUROSE-LIVING-v01]
+    prompt_ids: [KRS-S01, KRS-S02]
+    notes: 黒瀬家回の定番背景

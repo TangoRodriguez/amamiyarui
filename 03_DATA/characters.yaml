@@ -5,6 +5,14 @@ characters:
     grade: 高校2年
     worldview: 最適解より壊れない解
     home_area: 旧水杜商店街
+    class: 2-B
+    home_location_id: LOC-OLD-SHOTENGAI
+    main_locations: [LOC-SUIREI, LOC-AMAMIYA-LAB, LOC-MZM-RIVER]
+    canon_image: CH-RUI-3VIEW-v01
+    selected_images: [CH-RUI-EXPRESSION-v01, CH-RUI-POSE-v01]
+    visual_keywords: [癖毛, 細身, 付箋, 観察眼]
+    story_function: 問題構造の再定義者
+    notes: 類推力で解を示すが感情翻訳を要する
 
   - id: CH-MAHO
     name: 日向真帆
@@ -12,6 +20,14 @@ characters:
     grade: 高校2年
     worldview: 感情の翻訳
     home_area: 月ノ丘ニュータウン
+    class: 2-B
+    home_location_id: LOC-TSUKINOOKA
+    main_locations: [LOC-SUIREI, LOC-MZM-RIVER, LOC-TSUKINOOKA]
+    canon_image: null
+    selected_images: [CH-MAHO-3VIEW-v01, CH-MAHO-EXPRESSION-v01, CH-MAHO-POSE-v01]
+    visual_keywords: [清潔感, 柔らかい目元, 実用小物]
+    story_function: 雨宮の解法を人間の言葉へ翻訳
+    notes: 感情の取りこぼしを拾う
 
   - id: CH-KUROSE
     name: 黒瀬型
@@ -19,40 +35,104 @@ characters:
     grade: 高校2年
     worldview: 偏りの最適化
     home_area: 駅東口高層住宅
+    class: 2-A
+    home_location_id: LOC-KUROSE-LIVING
+    main_locations: [LOC-SUIREI, LOC-HAKUNIWA-OFFICE, LOC-CITYHALL-SMART]
+    canon_image: CH-KUROSE-3VIEW-v01
+    selected_images: [CH-KUROSE-EXPRESSION-v01, CH-KUROSE-POSE-v01]
+    visual_keywords: [整った姿勢, 低温, 制御感]
+    story_function: 最適化思想の実装者
+    notes: 善意と介入の境界を体現
 
   - id: CH-RIKU
     name: 小森陸
     role: 学校導入
     grade: 高校2年
     home_area: 旧商店街裏
+    class: 2-B
+    home_location_id: LOC-OLD-SHOTENGAI
+    main_locations: [LOC-SUIREI, LOC-OLD-SHOTENGAI]
+    canon_image: null
+    selected_images: []
+    visual_keywords: [親和性, 機動力, 日常感]
+    story_function: 校内トラブル導入
+    notes: 人間関係の接続ハブ
 
   - id: CH-RITSU
     name: 佐倉律
     role: 身体感覚軸
     grade: 高校2年
     home_area: 月ノ丘周辺
+    class: 2-B
+    home_location_id: LOC-TSUKINOOKA
+    main_locations: [LOC-SUIREI, LOC-TSUKINOOKA]
+    canon_image: null
+    selected_images: []
+    visual_keywords: [運動部, 直線的, 実感覚]
+    story_function: 身体の現実を提示
+    notes: 理屈偏重へのブレーキ役
 
   - id: CH-MEI
     name: 光田芽衣
     role: 情報導線
     grade: 高校2年
+    class: 2-C
+    home_location_id: LOC-MZM-STATION
+    main_locations: [LOC-SUIREI, LOC-MZM-STATION]
+    canon_image: null
+    selected_images: []
+    visual_keywords: [メディア感度, 速報性, 好奇心]
+    story_function: 情報収集と拡散の起点
+    notes: 発信倫理の葛藤を担当
 
   - id: AD-HARUOMI
     name: 雨宮晴臣
     role: 大人レギュラー
     job: 修理屋/元研究者
+    class: null
+    home_location_id: LOC-AMAMIYA-LAB
+    main_locations: [LOC-AMAMIYA-LAB, LOC-OLD-SHOTENGAI]
+    canon_image: null
+    selected_images: []
+    visual_keywords: [作業着, 古資料, 穏やかな眼差し]
+    story_function: 問いを渡すメンター
+    notes: 雨宮の知的原点
 
   - id: AD-KIRITANI
     name: 桐谷澪
     role: 准レギュラー
     job: 市役所職員
+    class: null
+    home_location_id: LOC-CITYHALL-SMART
+    main_locations: [LOC-CITYHALL-SMART, LOC-SHIRAGASE]
+    canon_image: null
+    selected_images: []
+    visual_keywords: [実務, 誠実, 疲労]
+    story_function: 行政現場への導線
+    notes: 制度と現場の板挟み
 
   - id: AD-USAMI
     name: 宇佐美遥
     role: 准レギュラー
     job: 事務所マネージャー
+    class: null
+    home_location_id: LOC-MZM-STATION
+    main_locations: [LOC-MZM-STATION]
+    canon_image: null
+    selected_images: []
+    visual_keywords: [SNS感度, 進行管理, 都市的]
+    story_function: ネット案件導線
+    notes: 炎上対応知見を持つ
 
   - id: AD-SAGARA
     name: 相良朔
     role: 准レギュラー
     job: フリースクールスタッフ
+    class: null
+    home_location_id: LOC-HOSHIHARA
+    main_locations: [LOC-HOSHIHARA, LOC-SHIRAGASE]
+    canon_image: null
+    selected_images: []
+    visual_keywords: [受容, 生活支援, 現場感]
+    story_function: 学び直し導線
+    notes: 支援の限界と希望を担う
